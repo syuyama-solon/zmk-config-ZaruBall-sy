@@ -17,6 +17,12 @@
 #define SCROLL 1
 
 / {
+    &led_strip {
+        chain-length = <4>;
+    };
+};
+
+/ {
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
