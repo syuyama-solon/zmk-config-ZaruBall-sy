@@ -17,7 +17,7 @@
 #define SCROLL 1
 
 / {
-    &led_strip {
+    led_strip {
         chain-length = <4>;
     };
 };
