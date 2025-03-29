@@ -138,7 +138,7 @@
             bindings = <
 &trans  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                             &bt BT_CLR_ALL  &none  &none  &none  &none  &none
 &trans  &rgb_ug RGB_EFF &rgb_ug RGB_SPI &rgb_ug RGB_BRI &rgb_ug RGB_HUI &rgb_ug RGB_SAI                          &bt BT_CLR      &none  &none  &none  &none  &none
-&trans  &rgb_ug RGB_EFR &rgb_ug RGB_SPI &rgb_ug RGB_BRI &rgb_ug RGB_HUI &rgb_ug RGB_SAI &none           &ind_bat &out OUT_TOG    &none  &none  &none  &none  &none
+&trans  &rgb_ug RGB_EFR &rgb_ug RGB_SPD &rgb_ug RGB_BRD &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_TOG &ind_bat &out OUT_TOG    &none  &none  &none  &none  &none
 &trans  &none           &none           &none           &none           &none           &none           &ind_con &studio_unlock  &none  &none  &none  &none  &none
 &trans                  &kp C_MUTE      &trans          &trans          &trans          &trans          &trans   &kp DEL                                     &trans
             >;
