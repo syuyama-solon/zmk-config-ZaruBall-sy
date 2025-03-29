@@ -21,7 +21,7 @@
     led_strip {
         chain-length = <4>;
     };
-;}
+};
 
 / {
     conditional_layers {
