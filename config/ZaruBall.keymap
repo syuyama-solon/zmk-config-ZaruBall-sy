@@ -19,7 +19,7 @@
 
 / {
     led_strip {
-        chain-length = <4>;
+        chain-length = <2>;
     };
 };
 
