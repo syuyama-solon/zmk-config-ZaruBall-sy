@@ -20,7 +20,7 @@
     led_strip {
         chain-length = <2>;
     };
-}
+};
 
 / {
     conditional_layers {
