@@ -16,6 +16,12 @@
 #define MOUSE 4
 #define SCROLL 1
 
+/{
+    led_strip {
+        chain-length = <2>;
+    };
+}
+
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
