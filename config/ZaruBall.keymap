@@ -86,9 +86,9 @@
             #binding-cells = <0>;
             bindings = 
                 // <&tog SCROLL>, 
-                <&macro_press &mo SCROLL>,
+                <&tog SCROLL>,
                 <&macro_pause_for_release>,
-                <&macro_release &mo SCROLL>;
+                <&tog SCROLL>;
         };
 
         ng_on: ng_on {
