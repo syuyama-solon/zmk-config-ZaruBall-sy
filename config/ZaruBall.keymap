@@ -137,7 +137,7 @@
 &kp ESC    &kp N1  &kp N2      &kp N3    &kp N4     &kp N5                                  &kp N6     &kp N7    &kp N8  &kp N9     &kp N0   &kp MINUS
 &kp TAB    &kp Q   &kp W       &kp E     &kp R      &kp T                                   &kp Y      &kp U     &kp I   &kp O      &kp P    &kp EQUAL
 &kp CAPS   &kp A   &kp S       &kp D     &kp F      &kp G      &kp INS          &kp LBKT   &kp H     &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
-&kp LSHFT  &kp Z   &kp X       &kp C     &kp V      &kp B      &kp GRAVE        &kp RBKT   &kp N     &kp M   &kp COMMA  &kp DOT  &kp FSLH   &lt SCROLL BACKSLASH
+&kp LSHFT  &kp Z   &kp X       &kp C     &kp V      &kp B      &kp GRAVE        &kp RBKT   &kp N     &kp M   &kp COMMA  &kp DOT  &kp FSLH   &lt 5 BACKSLASH
 &td0               &kp C_MUTE  &kp LWIN  &kp LCTRL  &mt LSHFT SPACE  &mo 2      &lt 3 RET  &kp BSPC                              &td1
             >;
         };
@@ -149,7 +149,7 @@
 &kp ESC    &kp N1  &kp N2      &kp N3    &kp N4     &kp N5                                 &kp N6    &kp N7  &kp N8     &kp N9   &kp N0     &kp MINUS
 &kp TAB    &ng Q   &ng W       &ng E     &ng R      &ng T                                  &ng Y     &ng U   &ng I      &ng O    &ng P      &kp EQUAL
 &kp CAPS   &ng A   &ng S       &ng D     &ng F      &ng G      &kp INS          &kp LBKT   &ng H     &ng J   &ng K      &ng L    &ng SEMI   &kp SQT
-&kp LSHFT  &ng Z   &ng X       &ng C     &ng V      &ng B      &kp GRAVE        &kp RBKT   &ng N     &ng M   &ng COMMA  &ng DOT  &ng SLASH   &lt SCROLL BACKSLASH
+&kp LSHFT  &ng Z   &ng X       &ng C     &ng V      &ng B      &kp GRAVE        &kp RBKT   &ng N     &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
 &td0               &kp C_MUTE  &kp LWIN  &kp LCTRL  &ng SPACE  &trans           &trans     &kp BSPC                              &td1
             >;
         };
