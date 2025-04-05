@@ -14,7 +14,6 @@
 #define LOWER 2
 #define RAISE 3
 #define ADJUST 4
-
 #define MOUSE 5
 #define SCROLL 2
 
