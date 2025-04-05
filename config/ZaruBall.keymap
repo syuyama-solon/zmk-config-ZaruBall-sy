@@ -85,16 +85,16 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                // <&to SCROLL>,
-                // <&macro_pause_for_release>,
-                // <&tog SCROLL>;
-
                 <&to SCROLL>,
-                <&macro_press>,
-                <&mo SCROLL>,
                 <&macro_pause_for_release>,
-                <&macro_release>,
-                <&mo SCROLL>;
+                <&tog SCROLL>;
+
+                // <&to SCROLL>,
+                // <&macro_press>,
+                // <&mo SCROLL>,
+                // <&macro_pause_for_release>,
+                // <&macro_release>,
+                // <&mo SCROLL>;
         };
 
         ng_on: ng_on {
