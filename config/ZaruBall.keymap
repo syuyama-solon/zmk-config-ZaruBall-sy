@@ -127,8 +127,6 @@
     };
 };
 
-jaka
-
 / {
     keymap {
         compatible = "zmk,keymap";
