@@ -81,13 +81,17 @@
         };
 
         // Support swapping into Scroll layer when AML is activated
+        // naginata layer on -> AML -> to_scroll_layer -> base layer？
         to_scroll_layer: to_scroll_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                <&to SCROLL>,
+                <&macro_press &mo SCROLL>,
                 <&macro_pause_for_release>,
-                <&tog SCROLL>;
+                <&macro_release &mo SCROLL>:
+                // <&to SCROLL>,
+                // <&macro_pause_for_release>,
+                // <&tog SCROLL>;
 
                 // <&to SCROLL>,
                 // <&macro_press>,
