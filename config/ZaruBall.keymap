@@ -121,7 +121,7 @@
             timeout-ms = <300>;
             key-positions = <32 33>;
             bindings = <&ng_on>;
-            layers = <0>;
+            layers = <0 1>;
         };
         combo_ng_off {
             timeout-ms = <300>;
