@@ -150,7 +150,7 @@
 &kp ESC    &kp N1  &kp N2      &kp N3    &kp N4     &kp N5                                 &kp N6    &kp N7  &kp N8     &kp N9   &kp N0     &kp MINUS
 &kp TAB    &ng Q   &ng W       &ng E     &ng R      &ng T                                  &ng Y     &ng U   &ng I      &ng O    &ng P      &kp EQUAL
 &kp CAPS   &ng A   &ng S       &ng D     &ng F      &ng G      &kp INS          &kp LBKT   &ng H     &ng J   &ng K      &ng L    &ng SEMI   &kp SQT
-&kp LSHFT  &ng Z   &ng X       &ng C     &ng V      &ng B      &kp GRAVE        &kp RBKT   &ng N     &ng M   &ng COMMA  &ng DOT  &ng FSLH   &kp SCROLL BACKSLASH
+&kp LSHFT  &ng Z   &ng X       &ng C     &ng V      &ng B      &kp GRAVE        &kp RBKT   &ng N     &ng M   &ng COMMA  &ng DOT  &ng SLASH   &kp SCROLL BACKSLASH
 &td0               &kp C_MUTE  &kp LWIN  &kp LCTRL  &ng SPACE  &to_scroll_layer &lt 2 RET  &kp BSPC                              &td1
             >;
         };
