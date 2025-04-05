@@ -55,12 +55,12 @@
 &sl { release-after-ms = <250>;}; // time needed for double click (for mkp_exit_AML)
 / {
     macros {
-        // When in AML, move to default layer when key (except mouse button) pressed
+        // When in AML, move to before layer(naginata or base) when key (except mouse button) pressed
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";                    
             #binding-cells = <1>;
             bindings = 
-                <&to BASE>,
+                <&tog MOUSE>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_layer_0";
         };
