@@ -153,7 +153,7 @@
             display-name = "Naginata";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             bindings = <
-&kp ESC    &kp N1  &trans      &trans    &trans     &kp N5                                 &kp N6    &kp N7  &kp N8     &kp N9   &kp N0     &kp MINUS
+&kp ESC    &kp N1  &trans      &trans    &trans     &trans                                 &kp N6    &kp N7  &kp N8     &kp N9   &kp N0     &kp MINUS
 &kp TAB    &ng Q   &ng W       &ng E     &ng R      &ng T                                  &ng Y     &ng U   &ng I      &ng O    &ng P      &kp EQUAL
 &kp CAPS   &ng A   &ng S       &ng D     &ng F      &ng G      &kp INS          &kp LBKT   &ng H     &ng J   &ng K      &ng L    &ng SEMI   &kp SQT
 &kp LSHFT  &ng Z   &ng X       &ng C     &ng V      &ng B      &kp GRAVE        &kp RBKT   &ng N     &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
@@ -165,7 +165,7 @@
             display-name = "Lower";
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
             bindings = <
-&trans  &kp F1   &kp F2     &trans    &trans     &kp F5               &kp LA(F2)  &kp KP_N7     &kp KP_N8   &kp KP_N9  &kp KP_SLASH     &kp KP_NUMLOCK
+&trans  &kp F1   &kp F2     &trans    &trans     &trans               &kp LA(F2)  &kp KP_N7     &kp KP_N8   &kp KP_N9  &kp KP_SLASH     &kp KP_NUMLOCK
 &trans  &kp F6   &kp F7     &kp F8    &kp F9     &kp F10              &kp LA(F1)  &kp KP_N4     &kp KP_N5   &kp KP_N6  &kp KP_MULTIPLY  &none
 &trans  &kp F11  &kp F12    &kp UP    &none      &kp HOME  &kp PG_UP  &kp LPAR    &kp C_VOL_UP  &kp KP_N1   &kp KP_N2  &kp KP_N3        &kp KP_MINUS    &none
 &trans  &none    &kp LEFT   &kp DOWN  &kp RIGHT  &kp END   &kp PG_DN  &kp RPAR    &kp C_VOL_DN  &kp KP_DOT  &kp KP_N0  &kp KP_EQUAL     &kp KP_PLUS     &none
@@ -177,7 +177,7 @@
             display-name = "Raise";
             sensor-bindings = <&inc_dec_kp LA(F2) LA(F1)>;
             bindings = <
-&trans  &none  &none  &none      &none      &none                            &none      &none     &none     &none     &none      &none
+&trans  &none  &none  &trans    &trans     &trans                            &none      &none     &none     &none     &none      &none
 &trans  &none  &none  &none      &none      &none                            &none      &none     &none     &none     &none      &none
 &trans  &none  &none  &mkp RCLK  &mkp LCLK  &msc SCRL_UP    &msc SCRL_LEFT   &kp PG_UP  &kp HOME  &none     &kp UP    &none      &none   &none
 &trans  &none  &none  &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp PG_DN  &kp END   &kp LEFT  &kp DOWN  &kp RIGHT  &none   &none
