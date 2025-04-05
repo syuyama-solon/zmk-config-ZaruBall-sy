@@ -34,33 +34,6 @@
     };
 };
 
-/ {
-    behaviors {
-        mtalt: mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&qwerty_mod LALT>, <&kp LANG2>;
-            display-name = "Mod-Tap";
-        };
-
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mt LALT LANG2>, <&mo RAISE>, <&mo MOUSE>;
-        };
-
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mt RCTL LANG1>, <&mo RAISE>, <&mo MOUSE>;
-        };
-    };
-};
-
 &sl { release-after-ms = <250>;}; // time needed for double click (for mkp_exit_AML)
 / {
     macros {
@@ -130,6 +103,33 @@
             bindings
                 = <&macro_tap &kp LANGUAGE_2 &to BASE>;
                 // = <&macro_tap &kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>;
+        };
+    };
+
+    / {
+        behaviors {
+            mtalt: mod_tap {
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                flavor = "hold-preferred";
+                tapping-term-ms = <200>;
+                bindings = <&qwerty_mod LALT>, <&kp LANG2>;
+                display-name = "Mod-Tap";
+            };
+
+            td0: tap_dance_0 {
+                compatible = "zmk,behavior-tap-dance";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&mt LALT LANG2>, <&mo RAISE>, <&mo MOUSE>;
+            };
+
+            td1: tap_dance_1 {
+                compatible = "zmk,behavior-tap-dance";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&mt RCTL LANG1>, <&mo RAISE>, <&mo MOUSE>;
+            };
         };
     };
 
