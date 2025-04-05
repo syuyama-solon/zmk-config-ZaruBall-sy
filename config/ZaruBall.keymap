@@ -97,14 +97,16 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LANGUAGE_1 &kp INTERNATIONAL_4 &to 1>;
+                = <&macro_tap &kp LANG1 &to 1>;
+                // = <&macro_tap &kp LANGUAGE_1 &kp INTERNATIONAL_4 &to 1>;
         };
         ng_off: ng_off {
 //          label = "ZM_ng_off";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>;
+                = <&macro_tap &kp LANG2 &to 0>;
+                // = <&macro_tap &kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>;
         };
     };
 
@@ -125,7 +127,7 @@
     };
 };
 
-
+jaka
 
 / {
     keymap {
@@ -139,7 +141,7 @@
 &kp TAB    &kp Q   &kp W       &kp E     &kp R      &kp T                                   &kp Y      &kp U     &kp I   &kp O      &kp P    &kp EQUAL
 &kp CAPS   &kp A   &kp S       &kp D     &kp F      &kp G      &kp INS          &kp LBKT   &kp H     &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
 &kp LSHFT  &kp Z   &kp X       &kp C     &kp V      &kp B      &kp GRAVE        &kp RBKT   &kp N     &kp M   &kp COMMA  &kp DOT  &kp FSLH   &lt SCROLL BACKSLASH
-&td0               &kp C_MUTE  &kp LWIN  &kp LCTRL  &kp SPACE  &to_scroll_layer &lt 2 RET  &kp BSPC                              &td1
+&td0               &kp C_MUTE  &kp LWIN  &kp LCTRL  &kp SPACE  &to_scroll_layer &lt 3 RET  &kp BSPC                              &td1
             >;
         };
 
@@ -151,7 +153,7 @@
 &kp TAB    &ng Q   &ng W       &ng E     &ng R      &ng T                                  &ng Y     &ng U   &ng I      &ng O    &ng P      &kp EQUAL
 &kp CAPS   &ng A   &ng S       &ng D     &ng F      &ng G      &kp INS          &kp LBKT   &ng H     &ng J   &ng K      &ng L    &ng SEMI   &kp SQT
 &kp LSHFT  &ng Z   &ng X       &ng C     &ng V      &ng B      &kp GRAVE        &kp RBKT   &ng N     &ng M   &ng COMMA  &ng DOT  &ng SLASH   &lt SCROLL BACKSLASH
-&td0               &kp C_MUTE  &kp LWIN  &kp LCTRL  &ng SPACE  &to_scroll_layer &lt 2 RET  &kp BSPC                              &td1
+&td0               &kp C_MUTE  &kp LWIN  &kp LCTRL  &ng SPACE  &to_scroll_layer &lt 3 RET  &kp BSPC                              &td1
             >;
         };
 
