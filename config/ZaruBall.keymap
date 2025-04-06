@@ -88,6 +88,19 @@
                 <&macro_release &mo BASE>;                 // QWERTYレイヤーを無効化
         };
 
+        test_macro: test_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press &mo BASE>,                   // QWERTY レイヤーを一時的に有効化
+                // <&macro_param_1to1>,                       // 引数（Modキー）を次の動作に渡す
+                // <&macro_press &kp MACRO_PLACEHOLDER>,      // Modキーを押す
+                <&macro_pause_for_release>,                // ユーザーがキーを離すまで待つ
+                // <&macro_param_1to1>,                       // 同じく
+                // <&macro_release &kp MACRO_PLACEHOLDER>,    // Modキーを離す
+                <&macro_release &mo BASE>;                 // QWERTYレイヤーを無効化
+        };
+
         ng_on: ng_on {
 //          label = "ZM_ng_on";
             compatible = "zmk,behavior-macro";
@@ -162,7 +175,7 @@
 &kp TAB    &kp Q   &kp W       &kp E     &kp R      &kp T                                   &kp Y      &kp U     &kp I   &kp O      &kp P    &kp EQUAL
 &kp CAPS   &kp A   &kp S       &kp D     &kp F      &kp G      &kp INS          &kp LBKT   &kp H     &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
 &kp LSHFT  &kp Z   &kp X       &kp C     &kp V      &kp B      &kp GRAVE        &kp RBKT   &kp N     &kp M   &kp COMMA  &kp DOT  &kp FSLH   &lt SCROLL BACKSLASH
-&td0               &kp C_MUTE  &qwerty_mod LWIN  &qwerty_mod LCTRL  &mt LSHFT SPACE  &to_scroll_layer      &lt 3 RET  &kp BSPC                              &td1
+&td0               &kp C_MUTE  &qwerty_mod LWIN  &test_macro  &mt LSHFT SPACE  &to_scroll_layer      &lt 3 RET  &kp BSPC                              &td1
             >;
         };
 
@@ -174,7 +187,7 @@
 &kp TAB    &ng Q   &ng W       &ng E     &ng R      &ng T                                  &ng Y     &ng U   &ng I      &ng O    &ng P      &kp EQUAL
 &kp CAPS   &ng A   &ng S       &ng D     &ng F      &ng G      &kp INS          &kp LBKT   &ng H     &ng J   &ng K      &ng L    &ng SEMI   &kp SQT
 &kp LSHFT  &ng Z   &ng X       &ng C     &ng V      &ng B      &kp GRAVE        &kp RBKT   &ng N     &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
-&td0               &kp C_MUTE  &qwerty_mod LWIN  &qwerty_mod LCTRL  &ng SPACE  &trans           &trans     &kp BSPC                              &td1
+&td0               &kp C_MUTE  &qwerty_mod LWIN  &test_macro  &ng SPACE  &trans           &trans     &kp BSPC                              &td1
             >;
         };
 
