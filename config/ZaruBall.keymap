@@ -120,13 +120,13 @@
 / {
     behaviors {
         // Customed Hold-Tap for SandS
-        // 他キーとの同時押しのみHold(Shift), 200m以上長押しすると、Tap(Space)のリピート
+        // 他キーとの同時押しのみHold(Shift), 500m以上長押しすると、Tap(Space)のリピート
         SandS: SandS {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <200>; // tap-unless-interruptedのため意味は無いが、設定しないとエラーはく
-            quick-tap-ms = <200>;
+            tapping-term-ms = <500>; // tap-unless-interruptedのため意味は無いが、設定しないとエラーはく
+            quick-tap-ms = <500>;
             bindings = <&kp>,<&kp>;
             display-name = "SandS";
         };
