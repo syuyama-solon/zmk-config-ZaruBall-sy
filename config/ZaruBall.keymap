@@ -217,7 +217,7 @@
         ed_jk {
             timeout-ms = <300>;
             key-positions = <33 34>;
-            bindings = <&mo jk>;
+            bindings = <&mo JK>;
             layers = <0>;
         };
     };
