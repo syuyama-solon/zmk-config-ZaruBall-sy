@@ -175,7 +175,7 @@
 &kp TAB    &ng Q   &ng W       &ng E     &ng R      &ng T                                  &ng Y     &ng U   &ng I      &ng O    &ng P      &kp EQUAL
 &kp CAPS   &ng A   &ng S       &ng D     &ng F      &ng G      &kp INS          &kp LBKT   &ng H     &ng J   &ng K      &ng L    &ng SEMI   &kp SQT
 &kp LSHFT  &ng Z   &ng X       &ng C     &ng V      &ng B      &kp GRAVE        &kp RBKT   &ng N     &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
-&ht_BASE LALT LANG2               &kp C_MUTE  &qwerty_mod LWIN  &qwerty_mod LCTRL  &ng SPACE  &trans           &trans     &kp BSPC         &ht_BASE LCTRL LANG1
+&ht_BASE LALT LANG2               &kp C_MUTE  &BL_mod LWIN  &BL_mod LCTRL  &ng SPACE  &trans           &trans     &kp BSPC         &ht_BASE LCTRL LANG1
             >;
         };
 
