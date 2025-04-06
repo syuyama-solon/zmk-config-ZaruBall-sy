@@ -64,17 +64,19 @@
         };
 
         // Support swapping into Scroll layer when AML is activated
-        // naginata layer on -> AML -> to_scroll_layer -> base layer？
-        // &toを使用することで&moから新たなレイヤーに移行できる。
-        // しかし、&toで移行したレイヤーから戻る時に&togで解除すると、レイヤー0へと戻ってしまう。
-        to_scroll_layer: to_scroll_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
+                // --------------------------------------------------------------------------------------
+                // マウス操作停止時に即座にSCROLLに移行可能。ただし、マウスカーソル移動時にはレイヤーが移動しない
+                // NAGINATAへの復帰可能
                 <&tog MOUSE>,
                 <&macro_press &mo SCROLL>,
                 <&macro_pause_for_release>,
                 <&macro_release &mo SCROLL>;
+                //---------------------------------------------------------------------------------------
+                // マウス操作中にもSCROLL並行可能
+                // NAGINATAにいたとしてもSCROLL解除後はBASEへと戻ってしまう
                 // <&to SCROLL>,
                 // <&macro_pause_for_release>,
                 // <&tog SCROLL>;
@@ -84,13 +86,13 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_press &mo MOD>,                        // 一時的に BASE レイヤーを有効に
+                <&macro_press &mo MOD>,                
                 <&macro_param_1to1>,
-                <&macro_press &kp MACRO_PLACEHOLDER>,           // Modキー押下
+                <&macro_press &kp MACRO_PLACEHOLDER>,  
                 <&macro_pause_for_release>,
                 <&macro_param_1to1>,
-                <&macro_release &kp MACRO_PLACEHOLDER>,         // Modキー解放
-                <&macro_release &mo MOD>;                      // BASE レイヤーを無効化（元に戻る）
+                <&macro_release &kp MACRO_PLACEHOLDER>,
+                <&macro_release &mo MOD>;              
         };
 
         ng_on: ng_on {
@@ -99,7 +101,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp LANGUAGE_1 &to NAGINATA>;
-                // = <&macro_tap &kp LANGUAGE_1 &kp INTERNATIONAL_4 &to 1>;
+                // = <&macro_tap &kp LANGUAGE_1 &kp INTERNATIONAL_4 &to 1>; // default
         };
         ng_off: ng_off {
 //          label = "ZM_ng_off";
@@ -107,13 +109,22 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp LANGUAGE_2 &to BASE>;
-                // = <&macro_tap &kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>;
+                // = <&macro_tap &kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>; // default
         };
     };
 };
 
 / {
     behaviors {
+        SandS: SandS {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            flavor = "tap-unless-interrupted";
+            quick-tap-ms = <200>;
+            bindings = <&kp LSHFT>,<&kp SPACE>;
+            display-name = "SandS";
+        };
+
         ht_BASE: ht_BASE {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -142,7 +153,7 @@
             timeout-ms = <300>;
             key-positions = <32 33>;
             bindings = <&ng_on>;
-            layers = <0 1>;
+            layers = <0 1>; // default: <0>
         };
         combo_ng_off {
             timeout-ms = <300>;
