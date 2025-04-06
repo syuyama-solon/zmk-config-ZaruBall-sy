@@ -132,6 +132,15 @@
                 tapping-term-ms = <200>;
                 bindings = <&ht_BASE RCTL LANG1>, <&mo RAISE>, <&mo MOUSE>;
             };
+
+            send_brackets: send_brackets {
+                compatible = "zmk,behavior-macro";
+                bindings = <
+                    &unicode 0x300C  // 「
+                    &unicode 0x300D  // 」
+                    &kp LEFT
+                >;
+            };
         };
 
     combos {
@@ -148,6 +157,12 @@
             bindings = <&ng_off>;
             layers = <0 1>;
         };
+        edit_bracket: edit_bracket {
+            timeout-ms = <300>;
+            key-positions = <33 34 28>;
+            bindings = <&send_brackets>;
+            layers = <1>;
+        }
     };
 };
 
