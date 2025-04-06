@@ -119,13 +119,12 @@
     behaviors {
         SandS: SandS {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
             quick-tap-ms = <200>;
             bindings = <&kp>,<&kp>;
             display-name = "SandS";
         };
-
         ht_BASE: ht_BASE {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
