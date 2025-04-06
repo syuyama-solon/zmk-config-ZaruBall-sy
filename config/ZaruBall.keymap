@@ -79,13 +79,13 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&tog NAGINATA>,                   // QWERTY レイヤーを一時的に有効化
+                <&to BASE>,                   // QWERTY レイヤーを一時的に有効化
                 <&macro_param_1to1>,                       // 引数（Modキー）を次の動作に渡す
                 <&macro_press &kp MACRO_PLACEHOLDER>,      // Modキーを押す
                 <&macro_pause_for_release>,                // ユーザーがキーを離すまで待つ
                 <&macro_param_1to1>,                       // 同じく
                 <&macro_release &kp MACRO_PLACEHOLDER>,    // Modキーを離す
-                <&tog NAGINATA>;                 // QWERTYレイヤーを無効化
+                <&to NAGINATA>;                 // QWERTYレイヤーを無効化
         };
 
         test_macro: test_macro {
