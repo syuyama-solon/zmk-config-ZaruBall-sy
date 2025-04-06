@@ -16,6 +16,8 @@
 #define ADJUST 4
 #define MOUSE 5
 #define MOD 6
+#define JK 7
+
 #define SCROLL 2
 
 /{
@@ -97,12 +99,6 @@
                 <&macro_release &mo MOD>;              
         };
 
-        mcr_jkf: mcr_jkf {
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <&kp LBKT>, <&kp RBKT>;
-        };
-
         ng_on: ng_on {
 //          label = "ZM_ng_on";
             compatible = "zmk,behavior-macro";
@@ -119,6 +115,51 @@
                 = <&macro_tap &kp LANGUAGE_2 &to BASE>;
                 // = <&macro_tap &kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>; // default
         };
+
+
+        jkt: jkt { //・
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH>, <&kp RET>; 
+        };
+        //jkr 保存 実装済み
+        // jke ディ 実装済み
+        // jkw 『』
+        jkq: jkq { // 新 Ctrl+End
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCTRL>, <&kp END>, <&macro_release&kp LCTRL>;
+        };
+        //jkg ≪≫
+        jkf: jkf { //「」
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>, <&kp RBKT>, <&kp RET>, <&kp LEFT>;
+        };
+        //jkd ？実装済み
+        jks: jks { // ()
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp RPAR>;
+        };
+        jka: jka { // ……
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp DOT>, <&kp DOT>, <&kp DOT>, <&kp DOT>, <&kp DOT>;
+        };
+        jkb: jkb { // 確定→
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RET>, <&kp LEFT>;
+        };
+        jkv: jkv { // 確定↓
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RET>, <&kp DOWN>;
+        };
+        //jkc ！実装済み
+        //jkx 【】
+        //jkz ---
     };
 };
 
@@ -171,11 +212,13 @@
             bindings = <&ng_off>;
             layers = <0 1>;
         };
-        ed_jkf {
+        // 編集モードの実装例(US配列にPCを設定する必要あり)
+        //macroで入力したい文字列を組み、comboで同時押し時にmacroを作動
+        ed_jk {
             timeout-ms = <300>;
-            key-positions = <28 33 34>;
-            bindings = <&mcr_jkf>;
-            layers = <0 1>;
+            key-positions = <33 34>;
+            bindings = <&mo jk>;
+            layers = <0>;
         };
     };
 };
@@ -265,6 +308,18 @@
 &kp CAPS   &kp A   &kp S       &kp D     &kp F      &kp G      &kp INS          &kp LBKT   &kp H     &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
 &kp LSHFT  &kp Z   &kp X       &kp C     &kp V      &kp B      &kp GRAVE        &kp RBKT   &kp N     &kp M   &kp COMMA  &kp DOT  &kp FSLH   &lt SCROLL BACKSLASH
 &trans               &kp C_MUTE  &trans  &trans  &mt LSHFT SPACE  &trans      &trans  &trans                              &trans
+            >;
+        };
+
+        jk_layer {
+            display-name = "Edit JK";
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            bindings = <
+&kp ESC    &kp N1  &kp N2      &kp N3    &kp N4     &kp N5                                   &kp N6    &kp N7  &kp N8     &kp N9   &kp N0     &kp MINUS
+&kp TAB    &jkq    &none       &none     &none      &jkt                                     &none     &none   &none      &none    &none      &none
+&kp CAPS   &jka    &jks        &none     &jkf       &none      &none              &kp LBKT   &none     &none   &none      &none    &none      &none
+&kp LSHFT  &none   &none       &none     &jkv       &jkb       &none              &kp RBKT   &none     &none   &none      &none    &none      &none
+&trans     &kp C_MUTE          &trans   &trans &mt LSHFT SPACE &trans             &trans     &trans                                           &trans
             >;
         };
 
