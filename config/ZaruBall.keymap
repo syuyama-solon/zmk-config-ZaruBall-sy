@@ -105,8 +105,9 @@
                 // = <&macro_tap &kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>;
         };
     };
+};
 
-    / {
+/ {
         behaviors {
             mtalt: mod_tap {
                 compatible = "zmk,behavior-hold-tap";
@@ -131,7 +132,6 @@
                 bindings = <&mt RCTL LANG1>, <&mo RAISE>, <&mo MOUSE>;
             };
         };
-    };
 
     combos {
         compatible = "zmk,combos";
