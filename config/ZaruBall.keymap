@@ -83,6 +83,7 @@
                 // <&tog SCROLL>;
         };
 
+        // NAGINATAにてModifierキー押下時にQwertyレイヤーを起動
         BL_mod: BL_mod {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -94,6 +95,12 @@
                 <&macro_param_1to1>,
                 <&macro_release &kp MACRO_PLACEHOLDER>,
                 <&macro_release &mo MOD>;              
+        };
+
+        mcr_jkf: mcr_jkf {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&kp LBKT>, <&kp RBKT>;
         };
 
         ng_on: ng_on {
@@ -117,11 +124,13 @@
 
 / {
     behaviors {
+        // Customed Hold-Tap for SandS
+        // 他キーとの同時押しのみHold(Shift), 200m以上長押しすると、Tap(Space)のリピート
         SandS: SandS {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <200>; // tap-unless-interruptedのため意味は無いが、設定しないとエラーはく
             quick-tap-ms = <200>;
             bindings = <&kp>,<&kp>;
             display-name = "SandS";
@@ -160,6 +169,12 @@
             timeout-ms = <300>;
             key-positions = <28 29>;
             bindings = <&ng_off>;
+            layers = <0 1>;
+        };
+        ed_jkf {
+            timeout-ms = <300>;
+            key-positions = <28 33 34>;
+            bindings = <&mcr_jkf>;
             layers = <0 1>;
         };
     };
