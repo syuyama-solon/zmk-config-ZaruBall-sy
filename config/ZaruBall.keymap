@@ -109,14 +109,14 @@
 
 / {
         behaviors {
-            mtalt: mod_tap {
-                compatible = "zmk,behavior-hold-tap";
-                #binding-cells = <0>;
-                flavor = "hold-preferred";
-                tapping-term-ms = <200>;
-                bindings = <&kp LALT>, <&kp LANG2>;
-                display-name = "Mod-Tap";
-            };
+            // mtalt: mod_tap {
+            //     compatible = "zmk,behavior-hold-tap";
+            //     #binding-cells = <0>;
+            //     flavor = "hold-preferred";
+            //     tapping-term-ms = <200>;
+            //     bindings = <&kp LALT>, <&kp LANG2>;
+            //     display-name = "Mod-Tap";
+            // };
 
             td0: tap_dance_0 {
                 compatible = "zmk,behavior-tap-dance";
@@ -174,7 +174,7 @@
 &kp TAB    &ng Q   &ng W       &ng E     &ng R      &ng T                                  &ng Y     &ng U   &ng I      &ng O    &ng P      &kp EQUAL
 &kp CAPS   &ng A   &ng S       &ng D     &ng F      &ng G      &kp INS          &kp LBKT   &ng H     &ng J   &ng K      &ng L    &ng SEMI   &kp SQT
 &kp LSHFT  &ng Z   &ng X       &ng C     &ng V      &ng B      &kp GRAVE        &kp RBKT   &ng N     &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
-&mtalt               &kp C_MUTE  &qwerty_mod LWIN  &qwerty_mod LCTRL  &ng SPACE  &trans           &trans     &kp BSPC                              &td1
+&td0               &kp C_MUTE  &qwerty_mod LWIN  &qwerty_mod LCTRL  &ng SPACE  &trans           &trans     &kp BSPC                              &td1
             >;
         };
 
