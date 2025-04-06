@@ -64,6 +64,7 @@
         };
 
         // Support swapping into Scroll layer when AML is activated
+        to_scroll_layer: to_scroll_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
