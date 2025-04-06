@@ -157,12 +157,12 @@
             bindings = <&ng_off>;
             layers = <0 1>;
         };
-        edit_bracket: edit_bracket {
+        edit_bracket {
             timeout-ms = <300>;
             key-positions = <33 34 28>;
             bindings = <&send_brackets>;
             layers = <1>;
-        }
+        };
     };
 };
 
