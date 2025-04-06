@@ -132,15 +132,6 @@
                 tapping-term-ms = <200>;
                 bindings = <&ht_BASE RCTL LANG1>, <&mo RAISE>, <&mo MOUSE>;
             };
-
-            send_brackets: send_brackets {
-                compatible = "zmk,behavior-macro";
-                bindings = <
-                    &unicode 0x300C  // 「
-                    &unicode 0x300D  // 」
-                    &kp LEFT
-                >;
-            };
         };
 
     combos {
