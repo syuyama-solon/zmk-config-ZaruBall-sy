@@ -114,7 +114,7 @@
                 #binding-cells = <0>;
                 flavor = "hold-preferred";
                 tapping-term-ms = <200>;
-                bindings = <&kp LANG2 &qwerty_mod LALT>;
+                bindings = <&kp LALT>, <&kp LANG2>;
                 display-name = "Mod-Tap";
             };
 
