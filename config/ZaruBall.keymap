@@ -115,7 +115,7 @@
                 #binding-cells = <0>;
                 flavor = "hold-preferred";
                 tapping-term-ms = <200>;
-                bindings = <&kp LALT>, <&qwerty_mod LALT>;
+                bindings = <&kp LALT>, <&kp LANG2>;
                 display-name = "Mod-Tap";
             };
 
@@ -235,7 +235,7 @@
 &kp TAB    &kp Q   &kp W       &kp E     &kp R      &kp T                                   &kp Y      &kp U     &kp I   &kp O      &kp P    &kp EQUAL
 &kp CAPS   &kp A   &kp S       &kp D     &kp F      &kp G      &kp INS          &kp LBKT   &kp H     &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
 &kp LSHFT  &kp Z   &kp X       &kp C     &kp V      &kp B      &kp GRAVE        &kp RBKT   &kp N     &kp M   &kp COMMA  &kp DOT  &kp FSLH   &lt SCROLL BACKSLASH
-&td0               &kp C_MUTE  &kp LWIN  &qwerty_mod LCTRL  &mt LSHFT SPACE  &to_scroll_layer      &lt 3 RET  &kp BSPC                              &td1
+&td0               &kp C_MUTE  &kp LWIN  &kp LCTRL  &mt LSHFT SPACE  &to_scroll_layer      &lt 3 RET  &kp BSPC                              &td1
             >;
         };
 
