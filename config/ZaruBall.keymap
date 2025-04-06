@@ -76,7 +76,7 @@
                 <&tog SCROLL>;
         };
 
-        qwerty_mod: qwerty_mod {
+        BL_mod: BL_mod {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -110,13 +110,13 @@
 
 / {
         behaviors {
-            mtalt: mod_tap {
+            td_BASE: td_BASE {
                 compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
                 flavor = "hold-preferred";
                 tapping-term-ms = <200>;
-                bindings = <&qwerty_mod>,<&kp>;
-                display-name = "Mod-Tap";
+                bindings = <&BL_mod>,<&kp>;
+                display-name = "TD-BL_mod";
             };
 
             td0: tap_dance_0 {
@@ -175,7 +175,7 @@
 &kp TAB    &ng Q   &ng W       &ng E     &ng R      &ng T                                  &ng Y     &ng U   &ng I      &ng O    &ng P      &kp EQUAL
 &kp CAPS   &ng A   &ng S       &ng D     &ng F      &ng G      &kp INS          &kp LBKT   &ng H     &ng J   &ng K      &ng L    &ng SEMI   &kp SQT
 &kp LSHFT  &ng Z   &ng X       &ng C     &ng V      &ng B      &kp GRAVE        &kp RBKT   &ng N     &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
-&mtalt LALT LANG2               &kp C_MUTE  &qwerty_mod LWIN  &qwerty_mod LCTRL  &ng SPACE  &trans           &trans     &kp BSPC                              &td1
+&td_BASE LALT LANG2               &kp C_MUTE  &qwerty_mod LWIN  &qwerty_mod LCTRL  &ng SPACE  &trans           &trans     &kp BSPC         &td_BASE LCTRL LANG1
             >;
         };
 
