@@ -109,30 +109,28 @@
 };
 
 / {
-        behaviors {
-            ht_BASE: ht_BASE {
-                compatible = "zmk,behavior-hold-tap";
-                #binding-cells = <2>;
-                flavor = "hold-preferred";
-                tapping-term-ms = <200>;
-                bindings = <&BL_mod>,<&kp>;
-                display-name = "ht-BL_mod";
-            };
-
-            td0: tap_dance_0 {
-                compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>;
-                bindings = <&ht_BASE LALT LANG2>, <&mo RAISE>, <&mo MOUSE>;
-            };
-
-            td1: tap_dance_1 {
-                compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>;
-                bindings = <&ht_BASE RCTL LANG1>, <&mo RAISE>, <&mo MOUSE>;
-            };
+    behaviors {
+        ht_BASE: ht_BASE {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&BL_mod>,<&kp>;
+            display-name = "ht-BL_mod";
         };
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&ht_BASE LALT LANG2>, <&mo RAISE>, <&mo MOUSE>;
+        };
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&ht_BASE RCTL LANG1>, <&mo RAISE>, <&mo MOUSE>;
+        };
+    };
 
     combos {
         compatible = "zmk,combos";
@@ -147,12 +145,6 @@
             key-positions = <28 29>;
             bindings = <&ng_off>;
             layers = <0 1>;
-        };
-        edit_bracket {
-            timeout-ms = <300>;
-            key-positions = <33 34 28>;
-            bindings = <&send_brackets>;
-            layers = <1>;
         };
     };
 };
