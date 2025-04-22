@@ -19,6 +19,9 @@
 
 #define SCROLL 2
 
+// スクロール量の設定
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+
 /{
     led_strip {
         chain-length = <5>;
@@ -119,6 +122,14 @@
 
 / {
     behaviors {
+        // スクロール用のbehaviorの設定
+        scroll_down_up: behavior_sensor_rotate_mouse_wheel_down_up {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            tap-ms = <20>; // スクロールのタップ時間
+        };
+
         // Customed Hold-Tap for SandS
         // 他キーとの同時押しのみHold(Shift), 500m以上長押しすると、Tap(Space)のリピート
         SandS: SandS {
@@ -175,7 +186,7 @@
 
         base_layer {
             display-name = "Base";
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&scroll_down_up>;
             bindings = <
 &kp ESC    &kp N1  &kp N2      &kp N3    &kp N4     &kp N5                                  &kp N6     &kp N7    &kp N8  &kp N9     &kp N0   &kp MINUS
 &kp TAB    &kp Q   &kp W       &kp E     &kp R      &kp T                                   &kp Y      &kp U     &kp I   &kp O      &kp P    &kp EQUAL
@@ -187,7 +198,7 @@
 
         naginata_layer {
             display-name = "Naginata";
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&scroll_down_up>;
             bindings = <
 &kp ESC    &kp N1  &kp N2      &kp N3    &kp N4     &kp N5                                 &kp N6    &kp N7  &kp N8     &kp N9   &kp N0     &kp MINUS
 &kp TAB    &ng Q   &ng W       &ng E     &ng R      &ng T                                  &ng Y     &ng U   &ng I      &ng O    &ng P      &kp EQUAL
