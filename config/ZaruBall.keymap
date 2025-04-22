@@ -153,7 +153,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&ht_BASE LALT LANG2>, <&mo RAISE>, <&mo MOUSE>;
+            bindings = <&mt LALT LANG2>, <&mo RAISE>, <&mo MOUSE>;
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
