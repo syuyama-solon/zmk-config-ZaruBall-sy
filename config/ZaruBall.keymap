@@ -140,13 +140,13 @@
         ng_on: ng_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LANG1 &kp INTERNATIONAL_4 &to 1>;
+            bindings = <&macro_tap &kp LANG1 &to NAGINATA>;
         };
     
         ng_off: ng_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LANG2 &kp INTERNATIONAL_5 &to 0>;
+            bindings = <&macro_tap &kp LANG2 &to BASE>;
         };
     };
 
@@ -188,11 +188,11 @@
             display-name = "Naginata";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&trans    &trans  &trans      &trans    &trans     &trans                       &trans &trans &trans &trans            &trans  &trans  &trans     &trans   &trans     &trans
-&trans    &ng Q   &ng W       &ng E     &ng R      &ng T                        &trans &trans &trans &trans            &ng Y   &ng U   &ng I      &ng O    &ng P      &kp EQUAL
-&trans    &ng A   &ng S       &ng D     &ng F      &ng G      &kp INS           &trans &trans &trans &trans  &trans    &ng H   &ng J   &ng K      &ng L    &ng SEMI   &kp SQT
-&trans    &ng Z   &ng X       &ng C     &ng V      &ng B      &kp GRAVE         &trans &trans &trans &trans  &trans    &ng N   &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
-&trans            &trans      &trans    &trans     &ng SPACE  &trans                                                   &trans  &trans                                           &trans
+&trans    &trans  &trans      &trans       &trans        &trans                       &trans &trans &trans &trans            &trans  &trans  &trans     &trans   &trans     &trans
+&trans    &ng Q   &ng W       &ng E        &ng R         &ng T                        &trans &trans &trans &trans            &ng Y   &ng U   &ng I      &ng O    &ng P      &kp EQUAL
+&trans    &ng A   &ng S       &ng D        &ng F         &ng G      &kp INS           &trans &trans &trans &trans  &trans    &ng H   &ng J   &ng K      &ng L    &ng SEMI   &kp SQT
+&trans    &ng Z   &ng X       &ng C        &ng V         &ng B      &kp GRAVE         &trans &trans &trans &trans  &trans    &ng N   &ng M   &ng COMMA  &ng DOT  &ng SLASH  &trans
+&trans            &trans      &BL_mod LWIN &BL_mod LCTRL &ng SPACE  &trans                                                   &trans  &trans                                           &trans
             >;
         };
 
@@ -210,7 +210,7 @@
 
         lower_layer {
             display-name = "Lower";
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             bindings = <
 &trans  &kp F1   &kp F2     &kp F3    &kp F4     &kp F5                &trans &trans &trans &trans            &kp LA(F2)   &kp KP_N7  &kp KP_N8 &kp KP_N9    &kp KP_SLASH    &kp KP_NUMLOCK
 &trans  &kp F6   &kp F7     &kp F8    &kp F9     &kp F10               &trans &trans &trans &trans            &kp LA(F1)   &kp KP_N4  &kp KP_N5 &kp KP_N6    &kp KP_MULTIPLY &none
@@ -234,7 +234,7 @@
 
         adjust_layer {
             display-name = "Adjust";
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
             bindings = <
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4           &trans &trans &trans &trans            &bt BT_CLR_ALL  &none  &none  &none  &none  &none
 &trans  &none         &none         &none         &none         &none                  &trans &trans &trans &trans            &bt BT_CLR      &none  &none  &none  &none  &none
