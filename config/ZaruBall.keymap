@@ -90,24 +90,36 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LEFT_CONTROL>,
-                <&macro_press &kp LSHIFT>,
-                <&macro_press &kp LEFT_COMMAND>,
-                <&macro_tap   &kp N4>,
-                <&macro_release &kp LEFT_COMMAND>,
-                <&macro_release &kp LSHIFT>,
-                <&macro_release &kp LEFT_CONTROL>;
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_press>,
+                <&kp LSHIFT>,
+                <&macro_press>,
+                <&kp LEFT_COMMAND>,
+                <&macro_tap>,
+                <&kp N4>,
+                <&macro_release>,
+                <&kp LEFT_COMMAND>,
+                <&macro_release>,
+                <&kp LSHIFT>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
         };
 
         screenshot_macro: screenshot_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LSHFT>,
-                <&macro_press &kp LGUI>,
-                <&macro_tap   &kp N4>,
-                <&macro_release &kp LGUI>,
-                <&macro_release &kp LSHIFT>;
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp N4>,
+                <&macro_release>,
+                <&kp LGUI>,
+                <&macro_release>,
+                <&kp LSHIFT>;
         };
     };
 };
@@ -144,11 +156,11 @@
             display-name = "Raise";
             sensor-bindings = <&inc_dec_kp LA(F2) LA(F1)>;
             bindings = <
-&trans  &none  &none  &none      &none      &none                            &none      &none     &none     &none     &none      &none
-&trans  &none  &none  &none      &none      &none                            &none      &none     &none     &none     &none      &none
-&trans  &none  &none  &mkp RCLK  &mkp LCLK  &msc SCRL_UP    &msc SCRL_LEFT   &kp PG_UP  &kp HOME  &none     &kp UP    &none      &none   &none
-&trans  &none  &none  &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp PG_DN  &kp END   &kp LEFT  &kp DOWN  &kp RIGHT  &none   &none
-&trans         &none  &trans     &trans     &trans          &trans           &trans     &kp DEL                                  &trans
+&trans  &none  &none  &screenshot_macro  &screenshot_to_clipboard_macro  &none                            &none      &none     &none     &none     &none      &none
+&trans  &none  &none  &none              &none                           &none                            &none      &none     &none     &none     &none      &none
+&trans  &none  &none  &mkp RCLK          &mkp LCLK                       &msc SCRL_UP    &msc SCRL_LEFT   &kp PG_UP  &kp HOME  &none     &kp UP    &none      &none   &none
+&trans  &none  &none  &mkp MB4           &mkp MB5                        &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp PG_DN  &kp END   &kp LEFT  &kp DOWN  &kp RIGHT  &none   &none
+&trans         &none  &trans             &trans                          &trans          &trans           &trans     &kp DEL                                  &trans
             >;
         };
 
