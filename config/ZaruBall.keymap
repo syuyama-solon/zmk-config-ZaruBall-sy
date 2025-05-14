@@ -41,7 +41,6 @@
 / {
     macros {
         // When in AML, move to before layer(naginata or base) when key (except mouse button) pressed
-
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
