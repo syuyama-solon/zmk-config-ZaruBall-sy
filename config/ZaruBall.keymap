@@ -154,14 +154,14 @@
         compatible = "zmk,combos";
         combo_ng_on {
             timeout-ms = <300>;
-            key-positions = <40 41>;
+            key-positions = <44 45>;
             bindings = <&ng_on>;
             layers = <0 1>;
         };
 
         combo_ng_off {
             timeout-ms = <300>;
-            key-positions = <32 33>;
+            key-positions = <36 37>;
             bindings = <&ng_off>;
             layers = <0 1>;
         };
