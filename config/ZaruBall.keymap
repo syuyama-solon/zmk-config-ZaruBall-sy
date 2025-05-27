@@ -20,7 +20,7 @@
 
 // スクロール量の設定
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
-
+&trackball_listener { input-processors = <&zip_temp_layer TRACKBALL_L 500>; };
 &trackball_scroller { layers = <SCROLL>; };
 
 / {
