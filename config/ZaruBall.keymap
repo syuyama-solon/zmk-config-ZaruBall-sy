@@ -126,9 +126,9 @@
     };
 };
 
-// &scroll_layer{
-//     layer = <SCROLL>;
-// };
+&trackball_scroller{
+    layer = <SCROLL>;
+};
 
 / {
     behaviors {
