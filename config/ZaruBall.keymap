@@ -126,6 +126,10 @@
     };
 };
 
+// &scroll_layer{
+//     layer = <SCROLL>;
+// };
+
 / {
     behaviors {
         // スクロール用のbehaviorの設定
