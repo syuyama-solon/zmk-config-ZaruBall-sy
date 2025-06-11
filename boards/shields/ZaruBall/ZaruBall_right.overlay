@@ -123,9 +123,7 @@
     compatible = "zmk,input-listener";
     device = <&trackball>;
 
-    input-processors = <
-        &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)
-        &zip_temp_layer 1 200>;
+    input-processors = <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;
 
     scroller {
         layers = <2>;
