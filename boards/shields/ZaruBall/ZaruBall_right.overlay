@@ -90,6 +90,7 @@
 };
 
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <input/processors.dtsi>
 
 &spi0 {
     status = "okay";
@@ -121,5 +122,7 @@
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
+
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>
   };
 };
