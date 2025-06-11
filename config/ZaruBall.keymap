@@ -8,6 +8,9 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <behaviors/naginata.dtsi>
 
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+
 #define BASE     0
 #define NAGINATA 1
 #define MOUSE    2
@@ -19,6 +22,19 @@
 
 // スクロール量の設定
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+
+&trackball_listener {
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT)
+                        &zip_temp_layer 1 500>;
+    scroller {
+        layers = <SCROLL>;
+        input-processors = <
+                            &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT)
+                            &zip_xy_scaler 1 20
+                            &zip_xy_to_scroll_mapper
+                            >;
+    };
+};
 
 / {
     conditional_layers {
