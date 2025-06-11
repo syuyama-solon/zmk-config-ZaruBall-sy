@@ -20,9 +20,6 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
-    - name: zmk-naginata
-      remote: ImSota
-      revision: main
   self:
     path: config
 
