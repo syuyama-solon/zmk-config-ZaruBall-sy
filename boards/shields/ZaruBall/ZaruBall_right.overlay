@@ -1,5 +1,6 @@
 #include "ZaruBall.dtsi"
-// #include <input/processors.dtsi>
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 
 //#include <dt-bindings/zmk/input_transform.h>
 
@@ -119,22 +120,23 @@
     };
 };
 
-/ {
-    /omit-if-no-ref/ zip_xy_transform: zip_xy_transform {
-        compatible = "zmk,input-processor-transform";
-        #input-processor-cells = <1>;
-        type = <INPUT_EV_REL>;
-        y-codes = <INPUT_REL_Y>;
-        x-codes = <INPUT_REL_X>;
-    };
-};
+// / {
+//     /omit-if-no-ref/ zip_xy_transform: zip_xy_transform {
+//         compatible = "zmk,input-processor-transform";
+//         #input-processor-cells = <1>;
+//         type = <INPUT_EV_REL>;
+//         y-codes = <INPUT_REL_Y>;
+//         x-codes = <INPUT_REL_X>;
+//     };
+// };
 
 / {
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
 
-    input-processors = <&zip_xy_transform>;
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)
+                        &zip_temp_layer 1 200>;>;
 
     // scroller {
     //     layers = <2>;
