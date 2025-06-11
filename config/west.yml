@@ -7,8 +7,6 @@ manifest:
       url-base: https://github.com/badjeff
     - name: caksoylar
       url-base: https://github.com/caksoylar
-    - name: ImSota
-      url-base: https://github.com/ImSota
   projects:
     - name: zmk
       remote: zmkfirmware
