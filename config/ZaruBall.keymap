@@ -19,16 +19,16 @@
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
-&trackball_listener {
-    scroller {
-        layers = <SCROLL>;
-        inputprocessors =  <        
-                            &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)
-                            &zip_xy_scaler 1 20
-                            &zip_xy_to_scroll_mapper
-                            >;
-    };
-};
+// &trackball_listener {
+//     scroller {
+//         layers = <SCROLL>;
+//         inputprocessors =  <        
+//                             &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)
+//                             &zip_xy_scaler 1 20
+//                             &zip_xy_to_scroll_mapper
+//                             >;
+//     };
+// };
 
 / {
     conditional_layers {
