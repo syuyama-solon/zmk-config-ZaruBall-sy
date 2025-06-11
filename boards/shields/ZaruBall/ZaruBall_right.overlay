@@ -134,17 +134,17 @@
     compatible = "zmk,input-listener";
     device = <&trackball>;
 
-    input-processors = <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;
+    input-processors = <&zip_xy_transform>;
 
-    scroller {
-        layers = <2>;
-        input-processors = <
-                            &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)
-                            &zip_xy_scaler 1 20
-                            &zip_xy_to_scroll_mapper
-                            >;
-    }
+    // scroller {
+    //     layers = <2>;
+    //     input-processors = <
+    //                         &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)
+    //                         &zip_xy_scaler 1 20
+    //                         &zip_xy_to_scroll_mapper
+    //                         >;
+    // }
   };
 };
-//  | INPUT_TRANSFORM_Y_INVERT)
-//                         &zip_temp_layer 1 200>;
+            // &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)
+            // &zip_temp_layer 1 200>;
