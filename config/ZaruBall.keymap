@@ -110,11 +110,11 @@
             display-name = "Base";
             sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
             bindings = <
-&kp ESC       &kp N1      &kp N2  &kp N3       &kp N4          &kp N5                           &kp LG(H)      &kp LG(LS(S))   &kp LA(F4)      &kp K_LOCK                      &kp NUMBER_6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB       &kp Q       &kp W   &kp E        &kp R           &kp T                            &kp LA(LS(O))  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2                    &kp Y         &kp U   &kp I      &kp O    &kp P     &kp EQUAL
-&kp LEFT_ALT  &kp A       &kp S   &kp D        &kp F           &kp G        &mkp MB4            &kp LS(LA(C))  &kp LEFT_GUI    &kp UP_ARROW    &kp RIGHT_WIN    &kp LBKT       &kp H         &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT     &kp Z       &kp X   &kp C        &kp V           &kp B        &mkp MB5            &kp LA(LS(P))  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT        &kp RBKT       &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
-&kp LEFT_WIN  &kp C_MUTE          &lt 3 LANG2  &kp LEFT_SHIFT  &lt 1 SPACE  &lt 2 LANGUAGE_1                                                                    &kp BACKSPACE  &kp RET                                             &kp RCTRL
+&kp ESC           &kp N1      &kp N2  &kp N3       &kp N4        &kp N5                           &kp LG(H)      &kp LG(LS(S))   &kp LA(F4)      &kp K_LOCK                      &kp NUMBER_6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
+&kp TAB           &kp Q       &kp W   &kp E        &kp R         &kp T                            &kp LA(LS(O))  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2                    &kp Y         &kp U   &kp I      &kp O    &kp P     &kp EQUAL
+&kp LEFT_WIN      &kp A       &kp S   &kp D        &kp F         &kp G        &mkp MB4            &kp LS(LA(C))  &kp LEFT_GUI    &kp UP_ARROW    &kp RIGHT_WIN    &kp LBKT       &kp H         &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT         &kp Z       &kp X   &kp C        &kp V         &kp B        &mkp MB5            &kp LA(LS(P))  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT        &kp RBKT       &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
+&kp LEFT_CONTROL  &kp C_MUTE          &lt 3 LANG2  &kp LEFT_ALT  &lt 1 SPACE  &lt 2 LANGUAGE_1                                                                    &kp BACKSPACE  &kp RET                                             &kp GRAVE
             >;
         };
 
@@ -124,8 +124,8 @@
             bindings = <
 &to_layer_0 ESC         &to_layer_0 N1  &to_layer_0 N2  &to_layer_0 N3  &to_layer_0 N4  &to_layer_0 N5            &trans  &trans  &trans  &trans                     &to_layer_0 N6  &to_layer_0 N7  &to_layer_0 N8  &to_layer_0 N9  &to_layer_0 N0     &to_layer_0 MINUS
 &to_layer_0 TAB         &to_layer_0 Q   &to_layer_0 W   &to_layer_0 E   &to_layer_0 R   &to_layer_0 T             &trans  &trans  &trans  &trans                     &to_layer_0 Y   &to_layer_0 U   &to_layer_0 I   &to_layer_0 O   &to_layer_0 P      &to_layer_0 EQUAL
-&to_layer_0 LEFT_ALT    &to_layer_0 A   &mkp RCLK       &mkp MCLK       &mkp LCLK       &msc SCRL_UP    &trans    &trans  &trans  &trans  &trans    &msc SCRL_LEFT   &msc SCRL_UP    &mkp LCLK       &kp UP          &mkp RCLK       &mkp MCLK          &to_layer_0 SEMICOLON
-&to_layer_0 LEFT_SHIFT  &to_layer_0 Z   &to_layer_0 X   &mkp MB4        &mkp MB5        &msc SCRL_DOWN  &trans    &trans  &trans  &trans  &trans    &msc SCRL_RIGHT  &msc SCRL_DOWN  &kp LEFT        &kp DOWN        &kp RIGHT       &to_layer_0 SLASH  &lt SCROLL BACKSLASH
+&to_layer_0 LEFT_ALT    &to_layer_0 A   &mkp RCLK       &mkp MCLK       &mkp LCLK       &msc SCRL_UP    &trans    &trans  &trans  &trans  &trans    &msc SCRL_LEFT   &msc SCRL_UP    &trans          &kp UP          &trans          &trans             &to_layer_0 SEMICOLON
+&to_layer_0 LEFT_SHIFT  &to_layer_0 Z   &to_layer_0 X   &trans          &trans          &msc SCRL_DOWN  &trans    &trans  &trans  &trans  &trans    &msc SCRL_RIGHT  &msc SCRL_DOWN  &kp LEFT        &kp DOWN        &kp RIGHT       &to_layer_0 SLASH  &lt SCROLL BACKSLASH
 &trans                  &trans                          &trans          &trans          &trans          &trans                                      &trans           &trans                                                                             &trans
             >;
         };
@@ -146,11 +146,11 @@
             display-name = "Raise";
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
             bindings = <
-&trans  &none  &none  &none      &none      &none                              &trans  &trans  &trans  &trans               &none     &none     &none     &none      &none  &none
-&trans  &none  &none  &none      &none      &none                              &trans  &trans  &trans  &trans               &none     &none     &none     &none      &none  &none
-&trans  &none  &none  &mkp RCLK  &mkp LCLK  &msc SCRL_UP    &msc SCRL_LEFT     &trans  &trans  &trans  &trans    &kp PG_UP  &kp HOME  &none     &kp UP    &none      &none  &none
-&trans  &none  &none  &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &kp PG_DN  &kp END   &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
-&trans  &none         &trans     &trans     &trans          &trans                                               &trans     &kp RET                                         &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                       &trans  &trans  &trans  &trans               &none     &none     &none     &none      &none  &none
+&trans  &none         &none         &none         &none         &none                              &trans  &trans  &trans  &trans               &none     &none     &none     &none      &none  &none
+&trans  &none         &none         &mkp RCLK     &mkp LCLK     &msc SCRL_UP    &msc SCRL_LEFT     &trans  &trans  &trans  &trans    &kp PG_UP  &kp HOME  &none     &kp UP    &none      &none  &none
+&trans  &none         &none         &trans        &trans        &msc SCRL_DOWN  &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &kp PG_DN  &kp END   &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
+&trans  &none                       &trans        &trans        &trans          &trans                                               &trans     &kp RET                                         &trans
             >;
         };
 
